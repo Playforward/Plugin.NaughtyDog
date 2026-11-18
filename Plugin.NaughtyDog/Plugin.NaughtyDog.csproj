@@ -1,0 +1,32 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <Authors>ServerEmus</Authors>
+    <Company>ServerEmus</Company>
+    <Copyright>$(Company)</Copyright>
+    <Version>0.0.1</Version>
+    <FileVersion>$(Version)</FileVersion>
+    <AssemblyVersion>$(Version)</AssemblyVersion>
+    <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="ServerEmus.ServerShared" Version="0.0.16" PrivateAssets="all" ExcludeAssets="runtime" ReferenceOutputAssembly="false" Private="true">
+      <IncludeAssets>compile; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <!-- Blowfish (ND's net crypt). Plugin.Medius deploys the same version beside it. -->
+    <PackageReference Include="BouncyCastle.Cryptography" Version="2.6.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <InternalsVisibleTo Include="Plugin.NaughtyDog.Tests" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Using Include="Serilog" />
+  </ItemGroup>
+
+</Project>

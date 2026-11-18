@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="Plugin.NaughtyDog/Plugin.NaughtyDog.csproj" />
+  <Project Path="Plugin.NaughtyDog.Tests/Plugin.NaughtyDog.Tests.csproj" />
+</Solution>
